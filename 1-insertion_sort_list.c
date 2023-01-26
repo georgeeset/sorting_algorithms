@@ -1,8 +1,9 @@
 #include "sort.h"
 /**
- *
- *
- *
+ * switch_back - switch the given index backword one step
+ * @list: pointer to current head of list
+ * @point: array element to be switched
+ * Return: returns nothing
  */
 void switch_back(listint_t **list, listint_t *point)
 {
@@ -29,17 +30,17 @@ void switch_back(listint_t **list, listint_t *point)
 }
 
 /**
-*
-*
-*
-*
+* sort_backwards - searches array backwards to find unsorted items
+* @array: pointer containing current head of list
+* @point: point to start backwards search
+* Return: returns nothing
 */
 void sort_backwards(listint_t **array, listint_t *point)
 {
 	listint_t *head;
 
 	head = point;
-	while(head->prev)
+	while (head->prev)
 	{
 		if (head->prev->n > head->n)
 		{
@@ -52,9 +53,9 @@ void sort_backwards(listint_t **array, listint_t *point)
 }
 
 /**
- *
- *
- *
+ * insertion_sort_list - sort linked list using insertion method
+ * @list: pointer to the head of linked list
+ * Return: returns nothing
  */
 void insertion_sort_list(listint_t **list)
 {
